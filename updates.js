@@ -4972,7 +4972,7 @@ function resetGame(keepPortal, resetting) {
 		document.getElementById('autoBattleTab').style.display = 'none';
 		u2Mutations.clear();
 	}
-	if (resetting) message("A green shimmer erupts then disappears, and you hit the ground. You look pretty hungry...", "Story");
+	if (resetting) message("You are teleported from Earth as you are playing Trimps, fall out of the sky, and you hit the ground. You look pretty hungry. Welcome to Kaizo Trimps!", "Story");
 }
 
 function stringToSeed(useString){

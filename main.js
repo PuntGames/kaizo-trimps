@@ -4035,7 +4035,7 @@ function activatePortal(){
 		message("A blue shimmer erupts then disappears as you gracefully take its place. You look like you don't belong here... Well, better start gathering some food.", "Story")
 	}
 	else{
-		message("A green shimmer erupts then disappears, and you hit the ground. You look pretty hungry...", "Story");
+		message("You are teleported from Earth as you are playing Trimps, fall out of the sky, and you hit the ground. You look pretty hungry. Welcome to Kaizo Trimps!", "Story");
 	}
 	if (game.options.menu.richPresence.enabled == 2 && typeof updateDiscordAndSteamRichPresence !== 'undefined') updateDiscordAndSteamRichPresence({}, true);
 	if (u2Mutations.respecOnPortal) u2Mutations.respec();
