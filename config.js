@@ -22,7 +22,7 @@ function newGame () {
 var toReturn = {
 	global: {
 		//New and accurate version
-		stringVersion: '5.10.1',
+		stringVersion: '0.1.0',
 		//Leave 'version' at 4.914 forever, for compatability with old saves
 		version: 4.914,
 		isBeta: false,
@@ -8197,15 +8197,15 @@ var toReturn = {
 	resources: {
 		food: {
 			owned: 0,
-			max: 500
+			max: 100
 		},
 		wood: {
 			owned: 0,
-			max: 500
+			max: 100
 		},
 		metal: {
 			owned: 0,
-			max: 500
+			max: 100
 		},
 		trimps: {
 			owned: 0,
@@ -13201,7 +13201,7 @@ var toReturn = {
 			},
 			cost: {
 				resources: {
-					food: 350
+					food: 100
 				}
 			},
 			fire: function () {
@@ -13216,7 +13216,7 @@ var toReturn = {
 			},
 			cost: {
 				resources: {
-					wood: 350
+					wood: 90
 				}
 			},
 			fire: function () {
@@ -13231,7 +13231,7 @@ var toReturn = {
 			},
 			cost: {
 				resources: {
-					metal: 350
+					metal: 90
 				}
 			},
 			fire: function () {
