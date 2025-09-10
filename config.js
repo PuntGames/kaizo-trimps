@@ -491,9 +491,14 @@ var toReturn = {
 			var world = getCurrentMapObject();
 			var amt = 0;
 			world = (game.global.mapsActive) ? world.level : game.global.world;
-			var attackBase = (game.global.universe == 2) ? 750 : 200;
+			var attackBase = (game.global.universe == 2) ? 750 : 50;
 			amt += attackBase * Math.sqrt(world) * Math.pow(3.27, world / 2);
 			amt -= 10;
+			if (world < 5) {
+				amt *= 3;
+			} else if (world < 10) {
+				amt *= 2;
+			}
 			if (world == 1){
 				amt *= 0.35;
 				amt = (amt * 0.20) + ((amt * 0.75) * (level / 100));
@@ -531,9 +536,14 @@ var toReturn = {
 			var world = getCurrentMapObject();
 			world = (game.global.mapsActive) ? world.level : game.global.world;
 			var amt = 0;
-			var healthBase = (game.global.universe == 2) ? 10e7 : 250;
+			var healthBase = (game.global.universe == 2) ? 10e7 : 130;
 			amt += healthBase * Math.sqrt(world) * Math.pow(3.265, world / 2);
 			amt -= 110;
+			if (world < 5) {
+				amt *= 3;
+			} else if (world < 10) {
+				amt *= 2;
+			}
 			if (world == 1 || world == 2 && level < 10){
 				amt *= 0.6;
 			amt = (amt * 0.25) + ((amt * 0.72) * (level / 100));
