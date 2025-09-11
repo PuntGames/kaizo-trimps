@@ -592,7 +592,7 @@ function load(saveString, autoLoad, fromPf) {
 			if (game.global.roboTrimpLevel > 8)
 				game.global.roboTrimpLevel = 8;
 		}
-		game.resources.trimps.potency = 0.0085;
+		game.resources.trimps.potency = 0.0170;
 		if (game.global.spentEssence > 0){
 			for (var item in game.talents){
 				game.talents[item].purchased = false;

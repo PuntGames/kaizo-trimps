@@ -494,10 +494,8 @@ var toReturn = {
 			var attackBase = (game.global.universe == 2) ? 750 : 50;
 			amt += attackBase * Math.sqrt(world) * Math.pow(3.27, world / 2);
 			amt -= 10;
-			if (world < 5) {
-				amt *= 3;
-			} else if (world < 10) {
-				amt *= 2;
+			if (world < 20) {
+				amt *= 3 - (world / 10);
 			}
 			if (world == 1){
 				amt *= 0.35;
@@ -539,10 +537,8 @@ var toReturn = {
 			var healthBase = (game.global.universe == 2) ? 10e7 : 130;
 			amt += healthBase * Math.sqrt(world) * Math.pow(3.265, world / 2);
 			amt -= 110;
-			if (world < 5) {
-				amt *= 3;
-			} else if (world < 10) {
-				amt *= 2;
+			if (world < 20) {
+				amt *= 3 - (world / 10);
 			}
 			if (world == 1 || world == 2 && level < 10){
 				amt *= 0.6;
@@ -8260,7 +8256,7 @@ var toReturn = {
 				}
 				return amt;
 			},
-			potency: 0.0085
+			potency: 0.0170
 		},
 		science: {
 			owned: 0,
