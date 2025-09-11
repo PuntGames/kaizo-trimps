@@ -5066,13 +5066,13 @@ function applyS2(){
 }
 
 function applyS3(){
-	game.global.playerModifier = 2;
+	game.global.playerModifier = 10;
 	game.resources.trimps.owned = game.resources.trimps.realMax();
 	if (document.getElementById("trimps").style.visibility == "hidden") fadeIn("trimps", 10);
 }
 //4.39Qi
 function applyS5(){
-	game.global.playerModifier = 10;
+	game.global.playerModifier = 50;
 	game.buildings.Barn.owned = 50;
 	game.buildings.Barn.purchased = 50;
 	game.resources.food.max = 562949953421312000;

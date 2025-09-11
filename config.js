@@ -30,7 +30,7 @@ var toReturn = {
 		killSavesBelow: 0.13,
 		uniqueId: new Date().getTime() + "" + Math.floor(Math.random() * 1e10),
 		playerGathering: "",
-		playerModifier: 1,
+		playerModifier: 5,
 		buildingsQueue: [],
 		timeLeftOnCraft: 0,
 		crafting: "",
@@ -8193,7 +8193,7 @@ var toReturn = {
 		}
 
 	},
-	trimpDeathTexts: ["ceased to be", "bit the dust", "took a dirt nap", "expired", "kicked the bucket", "evaporated", "needed more armor", "exploded", "melted", "fell over", "swam the river Styx", "turned into jerky", "forgot to put armor on", "croaked", "flatlined", "won't follow you to battle again", "died. Lame", "lagged out", "imp-loded", "hit a kaizo block", "took the wrong pipe", "forgot to equip armor"],
+	trimpDeathTexts: ["ceased to be", "bit the dust", "took a dirt nap", "expired", "kicked the bucket", "evaporated", "needed more armor", "exploded", "melted", "fell over", "swam the river Styx", "turned into jerky", "forgot to put armor on", "croaked", "flatlined", "won't follow you to battle again", "died. Lame", "lagged out", "imp-loded", "hit a kaizo block", "took the wrong pipe", "threw the shell backwards", "lost a life", "got a Game Over"],
 	badGuyDeathTexts: ["slew", "killed", "destroyed", "extinguished", "liquidated", "vaporized", "demolished", "ruined", "wrecked", "obliterated"],
 
 	settings: {
