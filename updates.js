@@ -7370,8 +7370,8 @@ function giveSingleAchieve(name) {
 				if (game.global.challengeActive == "Nurture") return "Scruffy plays his Riflunger while Cruffys sings, and you really wish you had some earplugs or something.";
 				return "You wonder if you'll ever get the chance to meet Cruffys. Maybe your Portal can bring you to his dimension some day.";
 			},
-			w133: "Some new Trimp reinforcements have brought a Z1 Turtlimp up with them in a box. The Trimps take turns feeding it and they're doing a good job taking care of it!",
-			w134: "One of the Trimps on feeding duty was a bit confused and seems to have eaten the Turtlimp.",
+			w133: "Some new Trimp reinforcements have brought a Z1 Kaizimp up with them in a box. The Trimps take turns feeding it and they're doing a good job taking care of it!",
+			w134: "One of the Trimps on feeding duty was a bit confused and seems to have eaten the Kaizimp.",
 			get w140(){
 				if (autoBattle.sessionEnemiesKilled > autoBattle.sessionTrimpsKilled) return "Huffy pops a quick message into your head to let you know he's doing fine in the Spire!";
 				return "Huffy pops a message into your head stating that as much as he likes constantly losing, he would appreciate a little help!"

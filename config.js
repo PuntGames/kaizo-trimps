@@ -8607,6 +8607,7 @@ var toReturn = {
 			fast: false
 		},
 		Turtlimp: {
+			displayName: "Kaizimp",
 			location: "All",
 			attack: 0.9,
 			health: 1.3,
