@@ -9746,6 +9746,7 @@ var toReturn = {
 			},
 			Milk: {
 				resourceType: "Any",
+				upgrade: "Coordination"
 			},
 			Prismatic: {
 				resourceType: "Any",
