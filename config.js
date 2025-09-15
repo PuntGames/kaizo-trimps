@@ -10341,6 +10341,8 @@ var toReturn = {
 				createMap(11, "The Block", "Block", 2, 100, 1.3, true, true);
 			}
 		},
+		
+		// newLevel, nameOverride, locationOverride, lootOverride, sizeOverride,  difficultyOverride, setNoRecycle, messageOverride
 		TheWall: {
 			world: -1,
 			message: "Oh snap! Another unique map!",
