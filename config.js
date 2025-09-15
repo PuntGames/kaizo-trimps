@@ -9009,6 +9009,17 @@ var toReturn = {
 				if (game.upgrades.Bounty.done == 0) giveSingleAchieve("Forgot Something");
 			}
 		},
+		Trimpdad: {
+			location: "Milk",
+			last: true,
+			world: 13,
+			attack: 1.5,
+			health: 4,
+			fast: false,
+			loot: function (level) {
+				message("As one of your Trimps defeats his own dad, his dad tells the Trimp he loves him. How happy! His dad runs away.", "Story");
+			}
+		},
 		Dragimp: {
 			location: "World",
 			world: 17,
@@ -9733,6 +9744,9 @@ var toReturn = {
 				resourceType: "Metal",
 				upgrade: "Portal"
 			},
+			Milk: {
+				resourceType: "Any",
+			},
 			Prismatic: {
 				resourceType: "Any",
 				upgrade: "Prismalicious"
@@ -10356,6 +10370,20 @@ var toReturn = {
 			fire: function () {
 				message("You just made a map to The Wall!", "Story");
 				createMap(15, "The Wall", "Wall", 2, 100, 1.5, true, true);
+			}
+		},
+		TheMilkStore: {
+			world: -1,
+			message: "You found a note from one of your Trimps' dads! It tells you to come to the milk store for an upgrade!",
+			level: [10, 20],
+			icon: "th-large",
+			title: "The Milk Store",
+			blockU2: true,
+			startAt: 13,
+			canRunOnce: true,
+			fire: function () {
+				message("You just made a map to The Milk Store!", "Story");
+				createMap(13, "The Milk Store", "Milk", 2, 25, 2, true, true);
 			}
 		},
 		BigWall: {
