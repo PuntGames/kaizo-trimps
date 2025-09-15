@@ -8704,13 +8704,14 @@ var toReturn = {
 		},
 		Duckimp: {
 			//Designed by August
+			displayName: "Punterimp",
 			location: "Sea",
 			attack: 0.9,
 			health: 1,
 			fast: true,
 			loot: function (level) {
 				var amt = rewardResource("food", 0.5, level, true);
-				message("Talking through your problems with what's left of the Duckimp helps you realize it was made out of " + prettify(amt) + " food! Just what you needed!", "Loot", "apple", null, 'primary');
+				message("Talking with the Punterimp, he tells you he made this mod! As you kill him in revenge, you discover he was made out of " + prettify(amt) + " food!", "Loot", "apple", null, 'primary');
 			}
 		},
 		Kittimp: {
