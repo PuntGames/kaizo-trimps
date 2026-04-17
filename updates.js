@@ -2564,7 +2564,7 @@ function countStackedVoidMaps(){
 function getTrimpPs() {
 	if (game.global.challengeActive == "Trapper" || game.global.challengeActive == "Trappapalooza") return;
 	var trimps = game.resources.trimps;
-	var base = 0.0510;
+	var base = 0.00510;
 	var textString =  "<table class='bdTable table table-striped'><tbody>";
 	//Add base
 	textString += "<tr><td class='bdTitle'>Base</td><td class='bdPercent'></td><td class='bdNumber'>" + base + "</td></tr>";
@@ -5667,7 +5667,7 @@ function updatePs(jobObj, trimps, jobName){ //trimps is true/false, send PS as f
 		var psText;
 		var elem;
 		if (trimps) {
-			psText = jobObj.toFixed(3);
+			psText = jobObj.toFixed(2);
 			elem = document.getElementById("trimpsPs");
 		}
 		else{
