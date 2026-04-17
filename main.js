@@ -592,7 +592,7 @@ function load(saveString, autoLoad, fromPf) {
 			if (game.global.roboTrimpLevel > 8)
 				game.global.roboTrimpLevel = 8;
 		}
-		game.resources.trimps.potency = 0.0170;
+		game.resources.trimps.potency = 0.0510;
 		if (game.global.spentEssence > 0){
 			for (var item in game.talents){
 				game.talents[item].purchased = false;
@@ -5525,7 +5525,7 @@ function buyUpgrade(what, confirmed, noTip, heldCtrl) {
 }
 
 function getDesiredGenes(ovr){
-	var breed_speed = 0.00085 * Math.pow(1.1,game.upgrades.Potency.done) * Math.pow(1.01,game.buildings.Nursery.owned) * (1 + 0.1*getPerkLevel("Pheromones")) * Math.pow(1.003,game.unlocks.impCount.Venimp);
+	var breed_speed = 0.00255 * Math.pow(1.1,game.upgrades.Potency.done) * Math.pow(1.01,game.buildings.Nursery.owned) * (1 + 0.1*getPerkLevel("Pheromones")) * Math.pow(1.003,game.unlocks.impCount.Venimp);
 	var maxGenes = (Math.floor(Math.log(12 * breed_speed * game.resources.trimps.owned / game.resources.trimps.soldiers) / -Math.log(0.98)));
 	return maxGenes;
 }

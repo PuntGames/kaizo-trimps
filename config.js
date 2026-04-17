@@ -8256,7 +8256,7 @@ var toReturn = {
 				}
 				return amt;
 			},
-			potency: 0.0170
+			potency: 0.0510
 		},
 		science: {
 			owned: 0,
