@@ -534,11 +534,11 @@ var toReturn = {
 			var world = getCurrentMapObject();
 			world = (game.global.mapsActive) ? world.level : game.global.world;
 			var amt = 0;
-			var healthBase = (game.global.universe == 2) ? 10e7 : 130;
+			var healthBase = (game.global.universe == 2) ? 10e7 : 10;
 			amt += healthBase * Math.sqrt(world) * Math.pow(3.265, world / 2);
 			amt -= 110;
 			if (world < 20) {
-				amt *= 3 - (world / 10);
+				amt *= 2 - (world / 10);
 			}
 			if (world == 1 || world == 2 && level < 10){
 				amt *= 0.6;

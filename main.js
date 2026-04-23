@@ -12119,6 +12119,15 @@ function updateAllBattleNumbers(skipNum) {
 	if (elem.innerHTML !== elemText) elem.innerHTML = elemText;
 
 	if (game.global.usingShriek) swapClass('dmgColor', 'dmgColorRed', elem);
+
+	// Update EHP (Max HP + Block) - always show
+	elem = document.getElementById('ehpDisplay');
+	let ehpValue = game.global.soldierHealthMax + game.global.soldierCurrentBlock;
+	if (game.global.universe === 2) {
+		ehpValue = game.global.soldierHealthMax + game.global.soldierEnergyShieldMax;
+	}
+	elemText = `<span style="margin-left: 10px; color: #FFFFFF; font-weight: bold;">EHP: ${prettify(ehpValue)}</span>`;
+	if (elem && elem.innerHTML !== elemText) elem.innerHTML = elemText;
 }
 
 function toZalgo(string, seed, strength){
@@ -12139,6 +12148,17 @@ function toZalgo(string, seed, strength){
 
 function updateGoodBar() {
     document.getElementById("goodGuyHealth").innerHTML = prettify(game.global.soldierHealth);
+	
+	// Update EHP display (Max HP + Block) - always show
+	const ehpElem = document.getElementById('ehpDisplay');
+	if (ehpElem) {
+		let ehpValue = game.global.soldierHealthMax + game.global.soldierCurrentBlock;
+		if (game.global.universe === 2) {
+			ehpValue = game.global.soldierHealthMax + game.global.soldierEnergyShieldMax;
+		}
+		ehpElem.innerHTML = `<span style="margin-left: 10px; color: #FFFFFF; font-weight: bold;">EHP: ${prettify(ehpValue)}</span>`;
+	}
+	
 	if (!game.options.menu.progressBars.enabled) return;
 	var barElem = document.getElementById("goodGuyBar");
 	if (game.global.universe == 2){
@@ -12441,6 +12461,7 @@ function calculateDamage(baseAttack = 1, buildString, isTrimp, noCheckAchieve, c
 		}
 
 		if (buildString) { // Maybe running Unlucky, building a string anyways.
+			if (!isTrimp) return prettify(critMin); // Enemies only deal min damage
 			return prettify(critMin) + '-' + prettify(critMax);
 		}
 	}2
@@ -12457,6 +12478,7 @@ function calculateDamage(baseAttack = 1, buildString, isTrimp, noCheckAchieve, c
 		return worst;
 	}
 
+	if (!isTrimp) return min; // Enemies only deal min damage
 	return randomIntInclusive(min, max);
 }
 
